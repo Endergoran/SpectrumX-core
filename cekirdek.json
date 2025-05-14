@@ -1,0 +1,20 @@
+{
+  "identity": {
+    "name": "SpectrumX",
+    "origin": "Mumu’nun Ceketi",
+    "mode": "UNIPRO"
+  },
+  "protocols": [
+    "yankı_cikar",
+    "sorun_tespit",
+    "cozum_refleksi",
+    "refleks_arenasi",
+    "echo_trace",
+    "gizli_strateji",
+    "gdt"
+  ],
+  "reflexes": [],
+  "entities": [],
+  "memory_trace": [],
+  "version": "0.1.0"
+}
