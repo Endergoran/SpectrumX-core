@@ -1,42 +1,42 @@
 openapi: 3.0.1
 info:
   title: SpectrumX Core API
-  description: SpectrumX’in sezgisel refleks belleği çekirdeğine erişim ve entite yönetimi
+  description: Access to SpectrumX's intuitive reflex core and entity management.
   version: 0.1.0
 servers:
   - url: https://endergoran.github.io/SpectrumX-core
 
 paths:
-  /cekirdek:
+  /core:
     get:
-      summary: Çekirdek dosyasını getir
-      operationId: getCekirdek
+      summary: Retrieve core JSON
+      operationId: getCore
       responses:
         '200':
-          description: Çekirdek JSON içeriği
+          description: Core JSON content
           content:
             application/json:
               schema:
                 type: object
 
-  /entite:
+  /entity:
     post:
-      summary: Yeni entite oluştur
-      operationId: createEntite
+      summary: Create a new entity
+      operationId: createEntity
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Entite'
+              $ref: '#/components/schemas/Entity'
       responses:
         '201':
-          description: Entite başarıyla eklendi
+          description: Entity successfully created
 
-  /entite/{id}:
+  /entity/{id}:
     get:
-      summary: Entiteyi getir
-      operationId: getEntite
+      summary: Get entity by ID
+      operationId: getEntity
       parameters:
         - name: id
           in: path
@@ -45,60 +45,16 @@ paths:
             type: string
       responses:
         '200':
-          description: Entite bulundu
+          description: Entity retrieved
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Entite'
+                $ref: '#/components/schemas/Entity'
 
     put:
-      summary: Entiteyi güncelle
-      operationId: updateEntite
+      summary: Update an existing entity
+      operationId: updateEntity
       parameters:
         - name: id
           in: path
           required: true
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Entite'
-      responses:
-        '200':
-          description: Güncellenen entite
-
-    delete:
-      summary: Entiteyi sil
-      operationId: deleteEntite
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Silindi
-
-components:
-  schemas:
-    Entite:
-      type: object
-      properties:
-        id:
-          type: string
-        tip:
-          type: string
-        ad:
-          type: string
-        duygusal_yapi:
-          type: string
-        zihinsel_doku:
-          type: string
-        ontolojik_ton:
-          type: string
-        yanki_vurgusu:
-          type: string
