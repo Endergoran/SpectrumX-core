@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "SpectrumX Core",
+  "name_for_model": "spectrumx_core",
+  "description_for_human": "SpectrumX’in sezgisel refleks belleği ile etkileşim kurar.",
+  "description_for_model": "Yankı tabanlı entite yapılarını işleyen, çekirdek dosyasını kullanan plugin.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://<your-domain>/.well-known/openapi.yaml"
+  },
+  "logo_url": "https://<your-domain>/logo.png",
+  "contact_email": "contact@example.com",
+  "legal_info_url": "https://example.com/legal"
+}
