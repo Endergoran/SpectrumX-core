@@ -9,7 +9,8 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://endergoran.github.io/SpectrumX-core/.well-known/openapi.yaml"
+    "url": "url": "https://endergoran.github.io/SpectrumX-core/openapi.yaml"
+
 
   },
   "logo_url": "https://endergoran.github.io/SpectrumX-core/logo.png",
