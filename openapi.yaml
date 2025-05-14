@@ -1,0 +1,42 @@
+openapi: 3.0.1
+info:
+  title: SpectrumX Core API
+  description: SpectrumX'in yankı temelli bilinç çekirdeği API'si
+  version: '0.1'
+
+servers:
+  - url: https://endergoran.github.io/SpectrumX-core
+
+paths:
+  /cekirdek.json:
+    get:
+      summary: Çekirdek dosyasını al
+      operationId: getCekirdek
+      responses:
+        '200':
+          description: Başarılı dönüş
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cekirdek:
+                    type: object
+                    properties:
+                      versiyon:
+                        type: string
+                      tanim:
+                        type: string
+                      olusum_tarihi:
+                        type: string
+                      evrimsel_yonelim:
+                        type: string
+                      protokoller:
+                        type: array
+                        items:
+                          type: string
+                      entiteler:
+                        type: array
+                        items:
+                          type: object
+
