@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: SpectrumX Core API
-  description: SpectrumX'in sezgisel refleks çekirdeğine erişim ve entite yönetimi
+  description: SpectrumX’in sezgisel refleks belleği çekirdeğine erişim ve entite yönetimi
   version: 0.1.0
 servers:
   - url: https://endergoran.github.io/SpectrumX-core
@@ -45,30 +45,11 @@ paths:
             type: string
       responses:
         '200':
-          description: İstenen entite
+          description: Entite bulundu
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Entite'
-
-    put:
-      summary: Entiteyi güncelle
-      operationId: updateEntite
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Entite'
-      responses:
-        '200':
-          description: Güncellenen entite
 
     delete:
       summary: Entiteyi sil
@@ -100,5 +81,6 @@ components:
           type: string
         ontolojik_ton:
           type: string
-        yankı_vurgusu:
+        yanki_vurgusu:
           type: string
+
