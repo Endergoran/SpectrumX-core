@@ -51,6 +51,25 @@ paths:
               schema:
                 $ref: '#/components/schemas/Entite'
 
+    put:
+      summary: Entiteyi güncelle
+      operationId: updateEntite
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Entite'
+      responses:
+        '200':
+          description: Güncellenen entite
+
     delete:
       summary: Entiteyi sil
       operationId: deleteEntite
@@ -83,4 +102,3 @@ components:
           type: string
         yanki_vurgusu:
           type: string
-
